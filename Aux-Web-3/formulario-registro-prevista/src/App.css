@@ -1,14 +1,48 @@
+.container {
+  width: auto;
+  max-width: 800px;
+  min-width: 550px;
+  background: white;
+  border-radius: 16px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 1rem;
+  color: #1D2B64;
+  background: linear-gradient(120deg, #1D2B64, #F8CDDA);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
 .tarjeta {
-  border: 1px solid #ccc;
+  border: 1px solid #F8CDDA;
   border-radius: 8px;
   padding: 1rem;
   margin-top: 1rem;
-  background-color: #f9f9f9;
+  background-color: #FEF9FC;
+}
+
+.tarjeta p {
+  padding: 0.5rem;
+  color: #2c3e66;
+}
+
+.tarjeta h3 {
+  text-align: center;
+  color: #1D2B64;
 }
 
 .mensaje-exito {
-  background-color: #d4edda;
-  color: #155724;
+  text-align: center;
+  background-color: #EFF5FF;
+  color: #1D2B64;
   padding: 0.5rem;
   border-radius: 4px;
   margin-top: 1rem;
@@ -16,13 +50,55 @@
 
 form input {
   display: block;
-  margin: 0.5rem 0;
-  padding: 0.5rem;
+  margin: 1rem 0;
+  padding: 0.75rem;
   width: 100%;
-  max-width: 300px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  transition: 0.2s;
+}
+
+form input:focus {
+  border-color: #1D2B64;
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(29, 43, 100, 0.2);
 }
 
 form button {
-  margin-top: 0.5rem;
-  padding: 0.5rem 1rem;
+  background-image: linear-gradient(to right, #1D2B64 0%, #F8CDDA 51%, #1D2B64 100%);
+  margin: 1rem auto 0 auto;
+  padding: 15px 45px;
+  text-align: center;
+  text-transform: uppercase;
+  transition: 0.5s;
+  background-size: 200% auto;
+  color: white;
+  box-shadow: 0 0 20px #eee;
+  border-radius: 10px;
+  display: block;
+  outline: none;
+  border: none;
+}
+
+form button:hover {
+  background-position: right center;
+  color: #fff;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+@media (max-width: 600px) {
+  form input {
+    margin: 0.75rem 0;
+    padding: 0.6rem;
+  }
+
+  form button {
+    margin-top: 0.75rem;
+    padding: 0.6rem 1rem;
+  }
+
+  .tarjeta {
+    margin-top: 1.5rem;
+  }
 }

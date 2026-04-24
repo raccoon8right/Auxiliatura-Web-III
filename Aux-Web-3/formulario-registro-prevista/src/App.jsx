@@ -21,7 +21,8 @@ function App() {
   }
 
   return (
-    <div>
+    <div className='container'>
+      <h1>REGISTRATE</h1>
       <form onSubmit={handleSubmit}>
         <input name='nombre' value={formData.nombre} onChange={handleChange} type='text' placeholder='Nombre...'></input>
         <input name='email' value={formData.email} onChange={handleChange} type='email' placeholder='Email...'></input>
